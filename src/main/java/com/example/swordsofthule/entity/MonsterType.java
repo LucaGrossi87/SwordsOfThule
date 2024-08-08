@@ -1,4 +1,4 @@
-package com.example.SwordsOfThule.entity;
+package com.example.swordsofthule.entity;
 
 public enum MonsterType {
     BEAST,

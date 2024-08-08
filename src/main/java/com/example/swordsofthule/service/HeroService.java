@@ -1,7 +1,7 @@
-package com.example.SwordsOfThule.service;
+package com.example.swordsofthule.service;
 
-import com.example.SwordsOfThule.entity.Hero;
-import com.example.SwordsOfThule.repository.HeroRepository;
+import com.example.swordsofthule.entity.Hero;
+import com.example.swordsofthule.repository.HeroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

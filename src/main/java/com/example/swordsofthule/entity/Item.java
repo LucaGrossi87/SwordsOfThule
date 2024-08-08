@@ -1,26 +1,28 @@
-package com.example.SwordsOfThule.entity;
+package com.example.swordsofthule.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.MappedSuperclass;
-import jakarta.validation.constraints.Min;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity
 @Data
+@Table(name = "items")
 @NoArgsConstructor
-@MappedSuperclass
-@AllArgsConstructor
-public abstract class Character {
+public class Item {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
     @NotBlank(message = "Campo obbligatorio")
     @Column(nullable = false)
     private String name;
 
-    @Min(value=1, message = "Il livello deve essere almeno 1")
+    @NotNull(message = "Campo obbligatorio")
     @Column(nullable = false)
-    private int level;
+    private ItemType type;
 
     @NotNull(message = "Campo obbligatorio")
     @Column(nullable = false)
@@ -29,8 +31,4 @@ public abstract class Character {
     @NotNull(message = "Campo obbligatorio")
     @Column(nullable = false)
     private int defence;
-
-    @Min(value = 0, message = "I punti ferita non possono essere meno di 0")
-    @Column(nullable = false)
-    private int hitPoints;
 }

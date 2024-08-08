@@ -1,6 +1,6 @@
-package com.example.SwordsOfThule.repository;
+package com.example.swordsofthule.repository;
 
-import com.example.SwordsOfThule.entity.Monster;
+import com.example.swordsofthule.entity.Monster;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MonsterRepository extends JpaRepository<Monster, Long> {

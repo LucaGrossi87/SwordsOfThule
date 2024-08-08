@@ -1,4 +1,4 @@
-package com.example.SwordsOfThule;
+package com.example.swordsofthule;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

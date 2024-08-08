@@ -1,7 +1,6 @@
-package com.example.SwordsOfThule.entity;
+package com.example.swordsofthule.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;

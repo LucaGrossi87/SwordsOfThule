@@ -1,7 +1,7 @@
-package com.example.SwordsOfThule.repository;
+package com.example.swordsofthule.repository;
 
-import com.example.SwordsOfThule.entity.Battleground;
-import com.example.SwordsOfThule.entity.BattlegroundType;
+import com.example.swordsofthule.entity.Battleground;
+import com.example.swordsofthule.entity.BattlegroundType;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
