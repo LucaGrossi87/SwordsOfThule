@@ -31,4 +31,11 @@ public class Item {
     @NotNull(message = "Campo obbligatorio")
     @Column(nullable = false)
     private int defence;
+
+    public Item (String name, ItemType type, int attack, int defence){
+        this.name=name;
+        this.type=type;
+        this.attack=attack;
+        this.defence=defence;
+    }
 }
