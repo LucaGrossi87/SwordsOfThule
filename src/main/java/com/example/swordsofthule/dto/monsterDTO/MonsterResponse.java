@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 public class MonsterResponse {
     private long id;
-    private long name;
+    private String name;
     private int level;
     private int attack;
     private int defence;
