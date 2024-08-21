@@ -41,6 +41,8 @@ public class HeroController {
 
     @PutMapping ("/{id}")
     public HeroResponse editHero (@PathVariable Long id, @RequestBody HeroEditRequest heroEditReq){
+        System.out.println("heroEditReq");
+        System.out.println(heroEditReq);
         Hero hero = convertToEntity(heroEditReq);
         hero.setId(id);
         Hero updatedHero = heroService.save(hero);

@@ -42,8 +42,17 @@ public class User {
     @Column(nullable = false)
     private int goldShards;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany
     @Column(nullable = false)
     private List<Hero> heroList;
 
+    public User (String firstName,String lastName, String userName, String password, String email, int goldShards, List<Hero> heroList){
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.userName=userName;
+        this.email=email;
+        this.password=password;
+        this.goldShards=goldShards;
+        this.heroList=heroList;
+    }
 }

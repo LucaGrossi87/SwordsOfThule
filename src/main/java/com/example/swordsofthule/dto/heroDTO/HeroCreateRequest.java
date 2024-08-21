@@ -3,6 +3,7 @@ package com.example.swordsofthule.dto.heroDTO;
 import com.example.swordsofthule.entity.HeroClass;
 import com.example.swordsofthule.entity.HeroRace;
 import com.example.swordsofthule.entity.Item;
+import com.example.swordsofthule.entity.User;
 import lombok.Data;
 
 import java.util.List;
