@@ -68,6 +68,7 @@ public class HeroController {
         dto.setName(hero.getName());
         dto.setRace(hero.getRace());
         dto.setType(hero.getType());
+        dto.setGoldShards(hero.getGoldShards());
         return dto;
     }
 
@@ -80,6 +81,7 @@ public class HeroController {
                 dto.getRace(),
                 dto.getType(),
                 dto.getXp(),
+                dto.getGoldShards(),
                 dto.getItemList());
     }
 
@@ -92,6 +94,7 @@ public class HeroController {
                 dto.getRace(),
                 dto.getType(),
                 dto.getXp(),
+                dto.getGoldShards(),
                 dto.getItemList());
     }
 }

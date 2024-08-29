@@ -31,15 +31,20 @@ public class Hero extends Character{
     @Column(nullable = false)
     private int xp;
 
+    @Min(value = 0, message = "I frammenti devono essere almeno 0")
+    @Column(nullable = false)
+    private int goldShards;
+
     @ManyToMany
     @Column(nullable = false)
     private List<Item> itemList;
 
-    public Hero (String name, int level, int attack, int defence, int hitPoints, HeroRace race, HeroClass type, int xp, List<Item> itemList){
+    public Hero (String name, int level, int attack, int defence, int hitPoints, HeroRace race, HeroClass type, int xp, int goldShards, List<Item> itemList){
         super(name, level, attack, defence, hitPoints);
         this.race=race;
         this.type=type;
         this.xp=xp;
+        this.goldShards=goldShards;
         this.itemList=itemList;
     }
 }

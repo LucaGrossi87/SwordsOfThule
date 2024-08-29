@@ -18,6 +18,7 @@ public class HeroEditRequest {
     private HeroRace race;
     private HeroClass type;
     private int xp;
+    private int goldShards;
     private List<Item> itemList;
     private final String method = "edit";
 }

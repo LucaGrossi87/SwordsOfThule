@@ -19,5 +19,6 @@ public class HeroResponse {
     private HeroRace race;
     private HeroClass type;
     private int xp;
+    private int goldShards;
     private List<Item> itemList;
 }
