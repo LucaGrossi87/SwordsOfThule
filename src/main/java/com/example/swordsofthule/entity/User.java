@@ -1,5 +1,6 @@
 package com.example.swordsofthule.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -42,8 +43,8 @@ public class User {
     @Column(nullable = false)
     private int goldShards;
 
-    @OneToMany
-    @Column(nullable = false)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Hero> heroList;
 
     public User (String firstName,String lastName, String userName, String password, String email, int goldShards, List<Hero> heroList){

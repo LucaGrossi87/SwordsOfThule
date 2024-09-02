@@ -1,5 +1,6 @@
 package com.example.swordsofthule.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -38,6 +39,11 @@ public class Hero extends Character{
     @ManyToMany
     @Column(nullable = false)
     private List<Item> itemList;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    @JsonBackReference
+    private User user;
 
     public Hero (String name, int level, int attack, int defence, int hitPoints, HeroRace race, HeroClass type, int xp, int goldShards, List<Item> itemList){
         super(name, level, attack, defence, hitPoints);
