@@ -45,12 +45,13 @@ public class Hero extends Character{
     @JsonBackReference
     private User user;
 
-    public Hero (String name, int level, int attack, int defence, int hitPoints, HeroRace race, HeroClass type, int xp, int goldShards, List<Item> itemList){
+    public Hero (String name, int level, int attack, int defence, int hitPoints, HeroRace race, HeroClass type, int xp, int goldShards, List<Item> itemList, User user){
         super(name, level, attack, defence, hitPoints);
         this.race=race;
         this.type=type;
         this.xp=xp;
         this.goldShards=goldShards;
         this.itemList=itemList;
+        this.user=user;
     }
 }
