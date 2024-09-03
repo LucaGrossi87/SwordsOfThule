@@ -69,6 +69,7 @@ public class HeroController {
         dto.setRace(hero.getRace());
         dto.setType(hero.getType());
         dto.setGoldShards(hero.getGoldShards());
+        dto.setUser(hero.getUser());
         return dto;
     }
 
@@ -82,7 +83,8 @@ public class HeroController {
                 dto.getType(),
                 dto.getXp(),
                 dto.getGoldShards(),
-                dto.getItemList());
+                dto.getItemList(),
+                dto.getUser());
     }
 
     private Hero convertToEntity (HeroEditRequest dto){
@@ -95,6 +97,7 @@ public class HeroController {
                 dto.getType(),
                 dto.getXp(),
                 dto.getGoldShards(),
-                dto.getItemList());
+                dto.getItemList(),
+                dto.getUser());
     }
 }

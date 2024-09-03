@@ -20,5 +20,6 @@ public class HeroCreateRequest {
     private int xp;
     private int goldShards;
     private List<Item> itemList;
+    private User user;
     private final String method = "create";
 }

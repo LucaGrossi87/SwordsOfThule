@@ -41,7 +41,7 @@ public class Hero extends Character{
     private List<Item> itemList;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id")
     @JsonBackReference
     private User user;
 

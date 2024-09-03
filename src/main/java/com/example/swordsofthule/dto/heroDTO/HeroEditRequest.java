@@ -20,5 +20,6 @@ public class HeroEditRequest {
     private int xp;
     private int goldShards;
     private List<Item> itemList;
+    private User user;
     private final String method = "edit";
 }

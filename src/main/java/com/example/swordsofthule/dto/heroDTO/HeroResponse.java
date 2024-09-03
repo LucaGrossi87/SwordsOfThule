@@ -21,4 +21,5 @@ public class HeroResponse {
     private int xp;
     private int goldShards;
     private List<Item> itemList;
+    private User user;
 }

@@ -31,7 +31,8 @@ public class User {
     @Column(nullable = false)
     private String userName;
 
-    @Email(message = "Campo obbligatorio")
+    @NotNull(message = "Campo obbligatorio")
+    @Email(message = "Inserire email valida")
     @Column(nullable = false)
     private String email;
 

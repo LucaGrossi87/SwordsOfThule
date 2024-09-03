@@ -41,7 +41,9 @@ public class UserController {
 
     @PutMapping ("/{id}")
     public UserResponse editUser(@RequestBody UserEditRequest userEditReq, @PathVariable Long id){
+        System.out.println(userEditReq);
         User user = convertToEntity(userEditReq);
+        System.out.println(user);
         user.setId(id);
         User savedUser = userService.save(user);
         return convertToDTO(savedUser);
@@ -69,21 +71,21 @@ public class UserController {
     }
 
     private User convertToEntity(UserCreateRequest dto){
-        return new User(dto.getEmail(),
-                dto.getFirstName(),
-                dto.getUserName(),
+        return new User(dto.getFirstName(),
                 dto.getLastName(),
+                dto.getUserName(),
                 dto.getPassword(),
+                dto.getEmail(),
                 dto.getGoldShards(),
                 dto.getHeroList());
     }
 
     private User convertToEntity(UserEditRequest dto){
-        return new User(dto.getEmail(),
-                dto.getFirstName(),
-                dto.getUserName(),
+        return new User(dto.getFirstName(),
                 dto.getLastName(),
+                dto.getUserName(),
                 dto.getPassword(),
+                dto.getEmail(),
                 dto.getGoldShards(),
                 dto.getHeroList());
     }
