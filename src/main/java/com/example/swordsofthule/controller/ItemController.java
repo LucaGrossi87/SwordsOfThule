@@ -63,6 +63,7 @@ public class ItemController {
         dto.setName(item.getName());
         dto.setAttack(item.getAttack());
         dto.setDefence(item.getDefence());
+        dto.setPrice(item.getPrice());
         return dto;
     }
 
@@ -70,13 +71,15 @@ public class ItemController {
         return new Item(dto.getName(),
                 dto.getType(),
                 dto.getAttack(),
-                dto.getDefence());
+                dto.getDefence(),
+                dto.getPrice());
     }
 
     private Item convertToEntity (ItemEditRequest dto){
         return new Item(dto.getName(),
                 dto.getType(),
                 dto.getAttack(),
-                dto.getDefence());
+                dto.getDefence(),
+                dto.getPrice());
     }
 }

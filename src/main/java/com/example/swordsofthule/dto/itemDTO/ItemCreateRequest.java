@@ -9,5 +9,6 @@ public class ItemCreateRequest {
     private ItemType type;
     private int attack;
     private int defence;
+    private int price;
     private final String method = "create";
 }

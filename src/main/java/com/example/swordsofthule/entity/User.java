@@ -1,6 +1,9 @@
 package com.example.swordsofthule.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -14,6 +17,9 @@ import java.util.List;
 @Table(name = "users")
 @Data
 @NoArgsConstructor
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,8 +50,8 @@ public class User {
     @Column(nullable = false)
     private int goldShards;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonManagedReference
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
     private List<Hero> heroList;
 
     public User (String firstName,String lastName, String userName, String password, String email, int goldShards, List<Hero> heroList){

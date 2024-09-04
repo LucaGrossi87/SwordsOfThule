@@ -41,9 +41,7 @@ public class UserController {
 
     @PutMapping ("/{id}")
     public UserResponse editUser(@RequestBody UserEditRequest userEditReq, @PathVariable Long id){
-        System.out.println(userEditReq);
         User user = convertToEntity(userEditReq);
-        System.out.println(user);
         user.setId(id);
         User savedUser = userService.save(user);
         return convertToDTO(savedUser);

@@ -41,7 +41,9 @@ public class HeroController {
 
     @PutMapping ("/{id}")
     public HeroResponse editHero (@PathVariable Long id, @RequestBody HeroEditRequest heroEditReq){
+        System.out.println(heroEditReq);
         Hero hero = convertToEntity(heroEditReq);
+        System.out.println(hero);
         hero.setId(id);
         Hero updatedHero = heroService.save(hero);
         return convertToDTO(updatedHero);
@@ -59,16 +61,16 @@ public class HeroController {
     private HeroResponse convertToDTO (Hero hero){
         HeroResponse dto = new HeroResponse();
         dto.setId(hero.getId());
-        dto.setXp(hero.getXp());
+        dto.setName(hero.getName());
+        dto.setLevel(hero.getLevel());
         dto.setAttack(hero.getAttack());
         dto.setDefence(hero.getDefence());
-        dto.setLevel(hero.getLevel());
         dto.setHitPoints(hero.getHitPoints());
-        dto.setItemList(hero.getItemList());
-        dto.setName(hero.getName());
         dto.setRace(hero.getRace());
         dto.setType(hero.getType());
+        dto.setXp(hero.getXp());
         dto.setGoldShards(hero.getGoldShards());
+        dto.setItemList(hero.getItemList());
         dto.setUser(hero.getUser());
         return dto;
     }

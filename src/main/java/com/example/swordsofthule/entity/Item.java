@@ -32,10 +32,15 @@ public class Item {
     @Column(nullable = false)
     private int defence;
 
-    public Item (String name, ItemType type, int attack, int defence){
+    @NotNull(message = "Campo obbligatorio")
+    @Column(nullable = false)
+    private int price;
+
+    public Item (String name, ItemType type, int attack, int defence, int price){
         this.name=name;
         this.type=type;
         this.attack=attack;
         this.defence=defence;
+        this.price=price;
     }
 }

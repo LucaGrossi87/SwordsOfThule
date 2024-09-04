@@ -10,4 +10,5 @@ public class ItemResponse {
     private ItemType type;
     private int attack;
     private int defence;
+    private int price;
 }
