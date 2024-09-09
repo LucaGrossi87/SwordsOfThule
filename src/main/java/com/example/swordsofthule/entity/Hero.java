@@ -1,8 +1,6 @@
 package com.example.swordsofthule.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -15,9 +13,9 @@ import java.util.List;
 @Table(name = "heroes")
 @Data
 @NoArgsConstructor
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id")
+//@JsonIdentityInfo(
+//        generator = ObjectIdGenerators.PropertyGenerator.class,
+//        property = "id")
 public class Hero extends Character{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -48,7 +46,6 @@ public class Hero extends Character{
     @ManyToOne
     @NotNull
     @JoinColumn(name = "user_id")
-    @JsonBackReference
     private User user;
 
     public Hero (String name, int level, int attack, int defence, int hitPoints, HeroRace race, HeroClass type, int xp, int goldShards, List<Item> itemList, User user){
