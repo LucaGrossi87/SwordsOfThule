@@ -63,11 +63,13 @@ public class HeroController {
         dto.setLevel(hero.getLevel());
         dto.setAttack(hero.getAttack());
         dto.setDefence(hero.getDefence());
+        dto.setHitPointsMax(hero.getHitPointsMax());
         dto.setHitPoints(hero.getHitPoints());
         dto.setRace(hero.getRace());
         dto.setType(hero.getType());
         dto.setXp(hero.getXp());
         dto.setGoldShards(hero.getGoldShards());
+        dto.setPerkPoints(hero.getPerkPoints());
         dto.setItemList(hero.getItemList());
         dto.setUser(hero.getUser());
         return dto;
@@ -78,11 +80,13 @@ public class HeroController {
                 dto.getLevel(),
                 dto.getAttack(),
                 dto.getDefence(),
+                dto.getHitPointsMax(),
                 dto.getHitPoints(),
                 dto.getRace(),
                 dto.getType(),
                 dto.getXp(),
                 dto.getGoldShards(),
+                dto.getPerkPoints(),
                 dto.getItemList(),
                 dto.getUser());
     }
@@ -92,11 +96,13 @@ public class HeroController {
                 dto.getLevel(),
                 dto.getAttack(),
                 dto.getDefence(),
+                dto.getHitPointsMax(),
                 dto.getHitPoints(),
                 dto.getRace(),
                 dto.getType(),
                 dto.getXp(),
                 dto.getGoldShards(),
+                dto.getPerkPoints(),
                 dto.getItemList(),
                 dto.getUser());
     }

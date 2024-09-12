@@ -39,6 +39,10 @@ public class Hero extends Character{
     @Column(nullable = false)
     private int goldShards;
 
+    @Min(value = 0, message = "I punti perks devono essere almeno 0")
+    @Column(nullable = false)
+    private int perkPoints;
+
     @ManyToMany
     @Column(nullable = false)
     private List<Item> itemList;
@@ -48,12 +52,13 @@ public class Hero extends Character{
     @JoinColumn(name = "user_id")
     private User user;
 
-    public Hero (String name, int level, int attack, int defence, int hitPoints, HeroRace race, HeroClass type, int xp, int goldShards, List<Item> itemList, User user){
-        super(name, level, attack, defence, hitPoints);
+    public Hero (String name, int level, int attack, int defence, int hitPointsMax, int hitPoints, HeroRace race, HeroClass type, int xp, int perkPoints, int goldShards, List<Item> itemList, User user){
+        super(name, level, attack, defence,hitPointsMax, hitPoints);
         this.race=race;
         this.type=type;
         this.xp=xp;
         this.goldShards=goldShards;
+        this.perkPoints=perkPoints;
         this.itemList=itemList;
         this.user=user;
     }

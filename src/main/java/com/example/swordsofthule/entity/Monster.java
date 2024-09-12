@@ -19,8 +19,8 @@ public class Monster extends Character{
     @Column(nullable = false)
     private MonsterType type;
 
-    public Monster(String name, int level, int attack, int defence, int hitPoints, MonsterType type){
-        super(name,level,attack,defence,hitPoints);
+    public Monster(String name, int level, int attack, int defence, int hitPointsMax, int hitPoints, MonsterType type){
+        super(name,level,attack,defence,hitPointsMax,hitPoints);
         this.type=type;
     }
 }

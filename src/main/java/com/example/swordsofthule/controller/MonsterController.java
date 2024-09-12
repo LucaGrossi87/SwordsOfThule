@@ -63,6 +63,7 @@ public class MonsterController {
         dto.setType(monster.getType());
         dto.setAttack(monster.getAttack());
         dto.setDefence(monster.getDefence());
+        dto.setHitPointsMax(monster.getHitPointsMax());
         dto.setHitPoints(monster.getHitPoints());
         dto.setName(monster.getName());
         return dto;
@@ -74,6 +75,7 @@ public class MonsterController {
                 dto.getLevel(),
                 dto.getAttack(),
                 dto.getDefence(),
+                dto.getHitPointsMax(),
                 dto.getHitPoints(),
                 dto.getType());
     }
@@ -84,6 +86,7 @@ public class MonsterController {
                 dto.getLevel(),
                 dto.getAttack(),
                 dto.getDefence(),
+                dto.getHitPointsMax(),
                 dto.getHitPoints(),
                 dto.getType());
     }

@@ -9,6 +9,7 @@ public class MonsterEditRequest {
     private int level;
     private int attack;
     private int defence;
+    private int hitPointsMax;
     private int hitPoints;
     private MonsterType type;
     private final String method = "Edit";

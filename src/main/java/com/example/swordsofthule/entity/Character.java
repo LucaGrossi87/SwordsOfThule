@@ -32,5 +32,9 @@ public abstract class Character {
 
     @Min(value = 0, message = "I punti ferita non possono essere meno di 0")
     @Column(nullable = false)
+    private int hitPointsMax;
+
+    @Min(value = 0, message = "I punti ferita non possono essere meno di 0")
+    @Column(nullable = false)
     private int hitPoints;
 }

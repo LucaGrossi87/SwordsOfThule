@@ -14,11 +14,13 @@ public class HeroEditRequest {
     private int level;
     private int attack;
     private int defence;
+    private int hitPointsMax;
     private int hitPoints;
     private HeroRace race;
     private HeroClass type;
     private int xp;
     private int goldShards;
+    private int perkPoints;
     private List<Item> itemList;
     private User user;
     private final String method = "edit";
